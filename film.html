@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>视界 · 成片</title>
+<meta name="description" content="视界 EVENT HORIZON 成片：72 秒宽银幕版与 40 秒竖屏版，全部由代码渲染。">
+<meta name="theme-color" content="#040407">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="视界 EVENT HORIZON · 成片">
+<meta property="og:description" content="A 72-second fall into a black hole, rendered entirely in code.">
+<meta property="og:image" content="https://sundyme.github.io/event-horizon/media/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=Noto+Serif+SC:wght@200;300;500&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --void:#040407;--panel:#0b0b10;--ink:#ece6da;--dim:#8d8a96;--faint:rgba(236,230,218,.14);--ember:#ffb36b;--plasma:#a9beff;
+  --serif:"Noto Serif SC","Songti SC","STSong","Source Han Serif SC",serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{background:var(--void)}
+body{margin:0;background:var(--void);color:var(--ink);font:300 1rem/1.8 var(--serif);-webkit-font-smoothing:antialiased;padding-inline:max(16px,5vw)}
+a{color:inherit}
+a:focus-visible,video:focus-visible{outline:2px solid var(--plasma);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.6rem 2rem;padding-block:2.2rem 1.6rem;border-bottom:1px solid var(--faint)}
+.brand{display:flex;align-items:baseline;gap:1rem;text-decoration:none}
+.brand .zh{font:200 2rem/1 var(--serif);letter-spacing:.12em}
+.brand .en{font:300 .72rem/1 var(--mono);letter-spacing:.5em;color:var(--ember)}
+nav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;font:400 .74rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+nav a{text-decoration:none;color:var(--dim);padding-block:.3rem;border-bottom:1px solid transparent}
+nav a:hover{color:var(--ink);border-bottom-color:var(--faint)}
+nav a[aria-current]{color:var(--ink);border-bottom-color:var(--ember)}
+.eyebrow{margin:0 0 .6rem;font:400 .7rem/1 var(--mono);letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+h1,h2{font-weight:200;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.15;letter-spacing:.04em}
+h2{font-size:clamp(1.35rem,2.4vw,1.8rem);letter-spacing:.06em}
+.intro{display:grid;gap:1rem;padding-block:3rem 2rem;max-width:44rem}
+.intro p{margin:0;color:rgba(236,230,218,.82);text-wrap:pretty}
+.cine{margin:0 0 3.5rem}
+.cine video{display:block;width:100%;max-width:100%;aspect-ratio:1920/804;background:#000;border:1px solid var(--faint)}
+figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem 1.5rem;margin-top:.8rem;font:400 .72rem/1.6 var(--mono);letter-spacing:.08em;color:var(--dim)}
+figcaption b{font-weight:400;color:var(--ink)}
+section{padding-block:2.6rem;border-top:1px solid var(--faint)}
+.sec-head{display:grid;gap:.5rem;margin-bottom:1.8rem;max-width:40rem}
+.sec-head p{margin:0;color:rgba(236,230,218,.75)}
+.verticals{display:grid;grid-template-columns:repeat(2,minmax(0,300px));gap:2rem;justify-content:start}
+.verticals figure{margin:0}
+.verticals video{display:block;width:100%;max-width:100%;aspect-ratio:9/16;background:#000;border:1px solid var(--faint)}
+.acts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:0 2rem}
+.acts li{display:grid;grid-template-columns:3.2rem 1fr;gap:.2rem 1rem;padding-block:1rem;border-top:1px solid var(--faint)}
+.acts .tc{grid-row:span 2;font:400 .74rem/1.9 var(--mono);color:var(--ember);font-variant-numeric:tabular-nums}
+.acts .t{font-weight:500;letter-spacing:.08em}
+.acts .d{font-size:.92rem;color:rgba(236,230,218,.72);line-height:1.7}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.6rem 2.4rem}
+.facts div{display:grid;gap:.4rem;align-content:start}
+.facts h3{margin:0;font:400 .74rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ember)}
+.facts p{margin:0;font-size:.95rem;color:rgba(236,230,218,.78);line-height:1.75}
+.facts code{font:400 .84em var(--mono);color:var(--ink);background:rgba(236,230,218,.06);padding:.08em .35em}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem 1rem;margin-top:.4rem}
+.btn{display:inline-flex;align-items:center;gap:.8rem;padding:.85rem 1.3rem;border:1px solid rgba(255,179,107,.55);background:rgba(255,179,107,.08);text-decoration:none;font:400 .9rem/1 var(--serif);letter-spacing:.24em}
+.btn:hover{background:rgba(255,179,107,.18);border-color:var(--ember)}
+.btn.ghost{border-color:var(--faint);background:transparent}
+.btn.ghost:hover{border-color:rgba(236,230,218,.45)}
+.btn .arrow{font-family:var(--mono);letter-spacing:0;color:var(--ember)}
+footer{padding-block:2.4rem 3rem;border-top:1px solid var(--faint);font:400 .72rem/1.8 var(--mono);letter-spacing:.06em;color:var(--dim);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem 2rem}
+@media (max-width:640px){
+  .verticals{grid-template-columns:1fr;justify-content:stretch}
+  .verticals figure{max-width:340px}
+  header{padding-block:1.6rem 1.2rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./"><span class="zh">视界</span><span class="en">EVENT HORIZON</span></a>
+    <nav aria-label="站点">
+      <a href="./">实时版</a>
+      <a href="film.html" aria-current="page">成片</a>
+      <a href="https://github.com/sundyme/event-horizon">源代码</a>
+    </nav>
+  </header>
+
+  <div class="intro">
+    <p class="eyebrow">成片 · Films</p>
+    <h1>从星空深处，坠向一个黑洞</h1>
+    <p>下面的影片与实时版使用同一个渲染器：每一束光都沿史瓦西黑洞周围的弯曲时空逐像素追踪，配乐由同一份代码实时合成。离线渲染时，每帧采样 6 次并加入运动模糊。</p>
+    <div class="cta">
+      <a class="btn" href="./">打开实时版 <span class="arrow">→</span></a>
+      <a class="btn ghost" href="https://github.com/sundyme/event-horizon/releases/latest">下载高码率原片</a>
+    </div>
+  </div>
+
+  <figure class="cine">
+    <video controls playsinline preload="metadata" poster="media/poster.jpg" src="media/event-horizon-film.mp4"></video>
+    <figcaption><span><b>宽银幕版</b> · 72 秒 · 2.39:1 · 1920×804 · 30 fps</span><span>点燃 13.5 s · 爱因斯坦环 16.4 s · 喷流 27 s · 光子球 55.8 s · 视界 60.3 s</span></figcaption>
+  </figure>
+
+  <section aria-labelledby="acts">
+    <div class="sec-head">
+      <p class="eyebrow">结构 · Structure</p>
+      <h2 id="acts">六幕，一次坠落</h2>
+    </div>
+    <ol class="acts">
+      <li><span class="tc">0:00</span><span class="t">虚空</span><span class="d">满天星光里，有一块天空不对劲：星星绕着一片虚无扭成光环。</span></li>
+      <li><span class="tc">0:09</span><span class="t">透镜</span><span class="d">冷尘埃遮出的剪影被点燃；背后的旋涡星系被弯成完整的爱因斯坦环。</span></li>
+      <li><span class="tc">0:20</span><span class="t">吸积</span><span class="d">盘的背面被引力折到阴影上方，迎面一侧因多普勒效应更亮、更热。</span></li>
+      <li><span class="tc">0:27</span><span class="t">喷流</span><span class="d">两道接近光速的喷流从两极射出。</span></li>
+      <li><span class="tc">0:34</span><span class="t">坠落</span><span class="d">贴着盘面下潜，一个热点绕着最内稳定轨道旋转，它的像环绕着阴影。</span></li>
+      <li><span class="tc">0:47</span><span class="t">视界</span><span class="d">穿过盘面，越过光子球，回头望：整个宇宙缩成头顶一个越来越蓝的光圈。</span></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="vertical">
+    <div class="sec-head">
+      <p class="eyebrow">竖屏版 · Vertical cut</p>
+      <h2 id="vertical">40 秒短视频剪辑</h2>
+      <p>为手机重新构图、重新渲染的 1080×1920 版本：第一帧即入题，距离视界的倒计时贯穿全片，配乐按新的剪辑节奏重新编排。</p>
+    </div>
+    <div class="verticals">
+      <figure>
+        <video controls playsinline preload="metadata" poster="media/vertical-zh.jpg" src="media/event-horizon-vertical-zh.mp4"></video>
+        <figcaption><span><b>中文字幕</b> · 40.5 秒</span></figcaption>
+      </figure>
+      <figure>
+        <video controls playsinline preload="metadata" poster="media/vertical-en.jpg" src="media/event-horizon-vertical-en.mp4"></video>
+        <figcaption><span><b>English</b> · 40.5 s</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="how">
+    <div class="sec-head">
+      <p class="eyebrow">原理 · How it works</p>
+      <h2 id="how">画面里没有一处是画出来的</h2>
+    </div>
+    <div class="facts">
+      <div><h3>测地线追踪</h3><p>每个像素沿史瓦西度规下的光线轨道积分，方程为 <code>x″ = −(3/2)·h²·x / r⁵</code>（r<sub>s</sub> = 1）。光子环、多重像和爱因斯坦环都是这样自然算出来的。</p></div>
+      <div><h3>静止观察者相机</h3><p>相机视线方向按 <code>b = r·sinα / √(1 − r<sub>s</sub>/r)</code> 换算为坐标方向。越靠近视界，能逃出去的光锥越窄，外面的宇宙随之缩成一个光圈。</p></div>
+      <div><h3>吸积盘</h3><p>一团有体积的发射/吸收气体：开普勒差速旋转，诺维科夫–索恩型温度分布，相对论多普勒因子、引力红移与普朗克黑体配色。</p></div>
+      <div><h3>声音</h3><p>全部由 Web Audio 实时合成：点燃时的低频冲击、爱因斯坦环的钟声、一段引力波"啁啾"、不断上升的谢泼德音阶，以及视界处的静默。</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>视界 EVENT HORIZON · WebGL2 · 单文件，无依赖库</span>
+    <a href="https://github.com/sundyme/event-horizon">github.com/sundyme/event-horizon</a>
+  </footer>
+</div>
+</body></html>

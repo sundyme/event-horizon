@@ -1,0 +1,6 @@
+node_modules/
+tools/node_modules
+out/
+.claude/
+.DS_Store
+*.wav
