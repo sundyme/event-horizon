@@ -1,6 +1,6 @@
 # 视界 · EVENT HORIZON
 
-**▶ 在线体验：https://sundyme.github.io/event-horizon/**　·　[成片](https://sundyme.github.io/event-horizon/film.html)　·　[下载原片](https://github.com/sundyme/event-horizon/releases/latest)
+**[▶ 在线体验](https://sundyme.github.io/event-horizon/)** · [成片](https://sundyme.github.io/event-horizon/film.html) · [下载原片](https://github.com/sundyme/event-horizon/releases/latest)
 
 ![视界 EVENT HORIZON](media/poster.jpg)
 
@@ -75,8 +75,8 @@ URL 参数：`?debug` 显示帧率与渲染分辨率；`?film&w=&h=` 离线模�
 
 **EVENT HORIZON** is a 72-second real-time journey into a black hole that runs in the browser as a single HTML file with no libraries. Every pixel traces a null geodesic of Schwarzschild spacetime. The accretion disk is a volumetric emitter with relativistic Doppler beaming, gravitational redshift and blackbody colour. The camera is a static observer, which is why the sky collapses into a shrinking ring of light near the horizon. The soundtrack is synthesised live with Web Audio from the same timeline. After the film, the page becomes a free-orbit explorer.
 
-- Live: https://sundyme.github.io/event-horizon/
-- Films (72 s 2.39:1, and 40 s vertical cuts in Chinese and English): https://sundyme.github.io/event-horizon/film.html
+- Live: [sundyme.github.io/event-horizon](https://sundyme.github.io/event-horizon/)
+- Films (72 s 2.39:1, and 40 s vertical cuts in Chinese and English): [film.html](https://sundyme.github.io/event-horizon/film.html)
 - Full-quality masters: [Releases](https://github.com/sundyme/event-horizon/releases/latest)
 
 Requires a WebGL2-capable browser. Rendering resolution adapts to hold 60 fps. MIT licensed.
